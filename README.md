@@ -4,8 +4,7 @@ A fun way to practice some computer vision knowledge using CNN´s.
 Motivation and Results
 The motivation behind this project was to create a useful application for the tools I have learned, particularly CNN´s for computer vision. I wanted to develop some parts from scratch (CNN),  but I also wanted to use transfer learning to facilitate the process by leveraging previous work done in the field.
 
-
-Input image and result.... 
+ Cars167.png
 
 
 
