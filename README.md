@@ -55,6 +55,13 @@ https://drive.google.com/drive/folders/1dtFh-x_NX_PXqPS_k1SrTay7bdDxJGJG?usp=sha
 I created 5 different CNN models with different architectures and different parameters. I wanted to try different architectures and compare how well they generalized for the unseen data of real licence plates. In terms of training performance they were all pretty similar with  accuracy levels over 98% and validation over 96%. 
 I decided to stick with the model that was having better accuracy at predicting real licence plates and not the one with the best training/validation accuracy. The model architecture that I chose at the end is very simple given that our images were also simple.
 
+### Results   
+
+![correct](https://github.com/jogepa/License_plate_detection/assets/114703913/988f178c-3a72-4969-a63c-46ef2cf32b0d)    
+
+![incorrect](https://github.com/jogepa/License_plate_detection/assets/114703913/e3c4fd86-3003-4b3a-a793-a4dbce17aae9)
+  
+
 
 ### Opportunities and Future Steps 
 The downside of the dataset used to train the CNN is that characters have very particular shapes. In licence plates, the shapes are often not that sharp or have different styles and that is where our model has difficulties interpreting the characters. One of my errors was trying to predict licence plates from different countries and different styles with a dataset that is not well generalized. I noticed some confusion mainly between 0 and D and also between some H and M characters. 
