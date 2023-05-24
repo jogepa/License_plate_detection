@@ -4,22 +4,27 @@ A fun way to practice some computer vision knowledge using CNN´s.
 Motivation and Results
 The motivation behind this project was to create a useful application for the tools I have learned, particularly CNN´s for computer vision. I wanted to develop some parts from scratch (CNN),  but I also wanted to use transfer learning to facilitate the process by leveraging previous work done in the field.
 
-![Cars167](https://github.com/jogepa/License_plate_detection/assets/114703913/24c5597c-444d-4061-bf65-6fe7105ee6f3)
+<img src="https://github.com/jogepa/License_plate_detection/assets/114703913/24c5597c-444d-4061-bf65-6fe7105ee6f3" alt="yolo" width="500px">  
 
 
+**Output text:** 15LK10898
 
-In a very high level, the process to accomplish the goal is the following:
-1.- Input image
-2.- Licence plate location identification
-3.- License plate cropping
-4.- Image preprocessing on cropped image 
-5.- Character detection
+
+In a very high level, the process to accomplish the goal is the following:  
+  
+1.- Input image  
+2.- Licence plate location identification  
+3.- License plate cropping  
+4.- Image preprocessing on cropped image   
+5.- Character detection  
 6.- Image to text with custom trained CNN.
 
 The following is a more detailed explanation. 
 
 ### YoloV5 Licence plate detection 
 For the first two points, I used the Crop_plate notebook where I took advantage of a [YoloV5 pretrained model](https://huggingface.co/keremberke/yolov5m-license-plate) specially trained to detect licence plates and their location. 
+
+<img src="https://github.com/jogepa/License_plate_detection/assets/114703913/965a2a6c-3a10-41c2-a094-9a650bba03a9" alt="yolo" width="300px"> ![cropped_img](https://github.com/jogepa/License_plate_detection/assets/114703913/649186ec-f104-4258-af51-32f44deab4c6)
 
 ### Licence plate preprocessing 
 To leverage the performance of computer vision it is useful to preprocess images. I preprocessed the cropped license plates to achieve the following:
@@ -32,18 +37,15 @@ To leverage the performance of computer vision it is useful to preprocess images
 
 With this preprocessing steps I intended to have the images in the same format as the images I used during training for my CNN and also achieve a better quality in the image and make it easier for future CNN to detect borders and patterns in the images.
 
-Images of preprocessing 
-
-
+<img src="https://github.com/jogepa/License_plate_detection/assets/114703913/3a10f1d7-c232-459c-a198-7af0b8ce1325" alt="yolo" width="400px">   
 
 ### Character Detection
 Finally I identify the individual characters of the licence plate sequence, as my CNN will predict individual characters and not the complete string. To do this, I identify the contours of the characters with the help of the CV2 library. Then I filter them based on size criteria to get only the important contours on the image and do not include noise like dashes or other symbols.
 
 And finally this detected contours are cropped again into individual pictures which will be fed into a CNN. 
 
-Aditional images
 
-
+<img src="https://github.com/jogepa/License_plate_detection/assets/114703913/95cf5095-9468-4360-a97d-0730161d7ac7" alt="yolo" width="400px">   
 
 
 ### Convolutional Neural Network
