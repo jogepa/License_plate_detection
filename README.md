@@ -4,7 +4,7 @@ A fun way to practice some computer vision knowledge using CNN´s.
 Motivation and Results
 The motivation behind this project was to create a useful application for the tools I have learned, particularly CNN´s for computer vision. I wanted to develop some parts from scratch (CNN),  but I also wanted to use transfer learning to facilitate the process by leveraging previous work done in the field.
 
- Cars167.png
+![Cars167](https://github.com/jogepa/License_plate_detection/assets/114703913/24c5597c-444d-4061-bf65-6fe7105ee6f3)
 
 
 
